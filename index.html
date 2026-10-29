@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System | Cosmic Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header class="topbar">
+    <a href="#" class="brand"><span class="brand-icon">✦</span> COSMOS<span class="brand-light">/EXPLORER</span></a>
+    <div class="galaxy-badge"><span class="live-dot"></span> MILKY WAY GALAXY</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">OUR COSMIC NEIGHBORHOOD</p>
+      <h1>Explore the <span>Solar System</span></h1>
+      <p class="subtitle">Eight planets. One star. Endless wonders.</p>
+    </section>
+
+    <section class="space-stage" aria-label="Interactive solar system">
+      <div class="nebula nebula-one"></div>
+      <div class="nebula nebula-two"></div>
+      <div class="sun-glow"></div>
+      <button class="sun" data-planet="Sun" aria-label="Explore the Sun">
+        <span class="sun-surface"></span>
+        <span class="sun-label">SUN</span>
+      </button>
+
+      <div class="orbit orbit-mercury"><button class="planet mercury" data-planet="Mercury" aria-label="Mercury"><span>Mercury</span></button></div>
+      <div class="orbit orbit-venus"><button class="planet venus" data-planet="Venus" aria-label="Venus"><span>Venus</span></button></div>
+      <div class="orbit orbit-earth"><button class="planet earth" data-planet="Earth" aria-label="Earth"><span>Earth</span></button></div>
+      <div class="orbit orbit-mars"><button class="planet mars" data-planet="Mars" aria-label="Mars"><span>Mars</span></button></div>
+      <div class="orbit orbit-jupiter"><button class="planet jupiter" data-planet="Jupiter" aria-label="Jupiter"><span>Jupiter</span></button></div>
+      <div class="orbit orbit-saturn"><button class="planet saturn" data-planet="Saturn" aria-label="Saturn"><span>Saturn</span></button></div>
+      <div class="orbit orbit-uranus"><button class="planet uranus" data-planet="Uranus" aria-label="Uranus"><span>Uranus</span></button></div>
+      <div class="orbit orbit-neptune"><button class="planet neptune" data-planet="Neptune" aria-label="Neptune"><span>Neptune</span></button></div>
+
+      <div class="stage-caption"><span class="live-dot"></span> INTERACTIVE MODEL <span class="caption-separator">•</span> NOT TO SCALE</div>
+    </section>
+
+    <section class="control-panel">
+      <div class="control-label"><span class="control-icon">◉</span><span id="orbit-status">ORBIT ANIMATION</span></div>
+      <button id="pause-btn" class="control-button">Ⅱ &nbsp; Pause orbits</button>
+      <div class="speed-control">
+        <label for="speed">ORBIT SPEED <span id="speed-value">1.0×</span></label>
+        <input id="speed" type="range" min="0.5" max="2.5" step="0.5" value="1">
+      </div>
+      <button id="reset-btn" class="reset-button" title="Reset animation">↻</button>
+    </section>
+
+    <section class="details-section" id="details">
+      <div class="section-heading">
+        <div><p class="eyebrow">DESTINATION LOG</p><h2>Discover a world</h2></div>
+        <span class="detail-counter" id="planet-counter">01 / 09</span>
+      </div>
+      <article class="planet-card" id="planet-card">
+        <div class="planet-art-wrap"><div class="planet-art earth-art" id="planet-art"></div></div>
+        <div class="planet-copy">
+          <p class="eyebrow" id="planet-type">TERRESTRIAL PLANET</p>
+          <h3 id="planet-name">Earth</h3>
+          <p id="planet-description">Our pale blue home, the only known world to support life, with oceans covering most of its surface.</p>
+          <div class="facts">
+            <div><span>DAY LENGTH</span><strong id="planet-day">24 hours</strong></div>
+            <div><span>YEAR LENGTH</span><strong id="planet-year">365 days</strong></div>
+            <div><span>FROM SUN</span><strong id="planet-distance">149.6 million km</strong></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <nav class="planet-nav" aria-label="Choose a celestial body">
+      <button class="nav-planet" data-planet="Sun"><span class="nav-dot sun-dot"></span>Sun</button>
+      <button class="nav-planet" data-planet="Mercury"><span class="nav-dot mercury-dot"></span>Mercury</button>
+      <button class="nav-planet" data-planet="Venus"><span class="nav-dot venus-dot"></span>Venus</button>
+      <button class="nav-planet active" data-planet="Earth"><span class="nav-dot earth-dot"></span>Earth</button>
+      <button class="nav-planet" data-planet="Mars"><span class="nav-dot mars-dot"></span>Mars</button>
+      <button class="nav-planet" data-planet="Jupiter"><span class="nav-dot jupiter-dot"></span>Jupiter</button>
+      <button class="nav-planet" data-planet="Saturn"><span class="nav-dot saturn-dot"></span>Saturn</button>
+      <button class="nav-planet" data-planet="Uranus"><span class="nav-dot uranus-dot"></span>Uranus</button>
+      <button class="nav-planet" data-planet="Neptune"><span class="nav-dot neptune-dot"></span>Neptune</button>
+    </nav>
+
+    <section class="galaxy-note">
+      <div class="note-icon">✧</div>
+      <div><p class="eyebrow">A BIGGER PICTURE</p><h3>A tiny part of something extraordinary.</h3><p>Our Solar System lives within the Milky Way, a barred spiral galaxy containing billions of stars.</p></div>
+    </section>
+  </main>
+
+  <footer><span> COSMOS / EXPLORER</span><span>MADE FOR THE CURIOUS <span class="footer-star">✦</span></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
